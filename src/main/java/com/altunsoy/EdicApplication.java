@@ -19,9 +19,9 @@ public class EdicApplication {
 	ApplicationRunner applicaitonrunner(GreetingRepository greetingRepository) {
 		
 		return args->{
-			greetingRepository.save(new Greeting("hello"));
+			///greetingRepository.save(new Greeting("hello"));
 			
-			greetingRepository.save(new Greeting("hi"));
+			///greetingRepository.save(new Greeting("hi"));
 		};
 		
 	}
