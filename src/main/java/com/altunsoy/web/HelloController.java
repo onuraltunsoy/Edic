@@ -18,7 +18,7 @@ public class HelloController {
 		this.greetingRepository = greetingRepository;
 	}
 
-	@RequestMapping(method = RequestMethod.GET, value = "/hello2")
+	@RequestMapping(method = RequestMethod.GET, value = "/hello3")
 	public String gets() {
 		return "Hello";
 	}

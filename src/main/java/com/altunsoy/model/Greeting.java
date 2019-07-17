@@ -23,10 +23,14 @@ public class Greeting{
 		this.message = message;
 	}
 	
-	
+	public Greeting() {
+		
+	}
 
-	
-	
+
+
+
+
 	public Long getId() {
 		return id;
 	}
