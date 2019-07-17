@@ -29,7 +29,7 @@ public class HelloController {
 	public String gets() {
 		return "Hello";
 	}
-	@GetMapping
+	@RequestMapping(method = RequestMethod.GET, value = "/greetings")
 	Iterable<Greeting> greetings(){
 		
 		return greetingRepository.findAll();
