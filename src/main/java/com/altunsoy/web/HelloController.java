@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.RestController;
 import com.altunsoy.dao.GreetingRepository;
 import com.altunsoy.model.Greeting;
 
+
 @RestController
 public class HelloController {
 	private  final GreetingRepository greetingRepository;
