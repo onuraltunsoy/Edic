@@ -4,6 +4,7 @@ package com.altunsoy.model;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Table;
+import javax.validation.constraints.NotEmpty;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 
@@ -15,6 +16,7 @@ public class Greeting{
 	@GeneratedValue
 	private Long id;
 	
+	@NotEmpty
 	@Column
 	private String message;
 	
