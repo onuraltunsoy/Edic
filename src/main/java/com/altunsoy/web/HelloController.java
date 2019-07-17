@@ -1,6 +1,7 @@
 package com.altunsoy.web;
 
 
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
@@ -26,6 +27,18 @@ public class HelloController {
 	Iterable<Greeting> greetings(){
 		
 		return greetingRepository.findAll();
+	}
+	@RequestMapping(method = RequestMethod.POST, value = "/greetings")
+	public ResponseEntity<?> greetings(Greeting greeting){
+		
+		
+		try {
+			greetingRepository.save(greeting);
+			return ResponseEntity.ok(greeting);
+		} catch (Exception ex) {
+			return ResponseEntity.notFound().build();
+		}
+		 
 	}
 	
 }
